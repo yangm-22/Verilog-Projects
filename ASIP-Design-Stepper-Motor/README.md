@@ -10,6 +10,10 @@ On the hardware side, the processor interfaces with a motor driver circuit (SN75
 
 Overall, the project demonstrates the construction of a custom processor tailored for a specific control application, combining datapath design, finite-state machine control, and real-time embedded hardware interfacing to achieve precise stepper motor control.
 
-
 ## Demo
 This is the [Demo](https://youtu.be/zwOuZycwnS0).
+
+
+![ASIP diagram](ASIP.png)
+![circuit diagram](circuit.png)
+
