@@ -9,6 +9,7 @@ In the response state, the FSM waits for KEY0 or KEY3 to be pressed. The first v
 
 If a button press occurs before the start signal, the FSM enters a cheat state, where no winner is assigned and the HEX displays show a predefined error pattern depending on which user cheated (or both). Finally, the FSM enters a result state, where the outcome is held on the display and win counters are updated. The system remains in this state until KEY2 is pressed to begin the next round.
 
+![FSM diagram](fsm_diagram.png)
 
 ## Random Number Generator (LFSR) Description
 
