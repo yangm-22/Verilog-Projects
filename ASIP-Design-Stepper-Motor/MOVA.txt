@@ -1,0 +1,44 @@
+; Welcome to compiler tutorial #1
+
+; Syntax:
+; 1. Semicolon's are comments, anything after a Semicolon 
+;    will be ignored during compilation
+; 2. All instructions start with an instruction name, in
+;    all caps. We currently support the following instructions:
+;    BR,BRZ,ADDI,SUBI,SR0,SRH0,CLR,MOV,MOVA,MOVR,MOVRHS,PAUSE
+; 3. Immediate constants are preceded by a pound, #
+; 4. Register adresses are preceded by the letter r
+; 5. Instruction parameters can be separated by a space, comma
+;    or both. The compiler is not that fussy
+; 6. Only one instruction is allowed per line
+
+; Let's see some code
+
+; pause delay set in register 3
+CLR r0
+SR0 #2
+SRH0 #3
+MOV r3 r0      
+
+; move motor 3 positions clockwise using MOVA
+CLR r0
+SR0 #3
+MOV r1 r0       ; r1 = +3
+MOVA r1
+
+PAUSE
+
+; move motor 4 positions counter-clockwise using MOVA
+CLR r0
+SR0 #12
+SRH0 #15
+MOV r1 r0       ; r1 = 0xFC = -4
+MOVA r1
+
+PAUSE
+
+; repeat forever
+BR #-11
+
+; To Compile Me:
+; python compiler.py MOVA.txt

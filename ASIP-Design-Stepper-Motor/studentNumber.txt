@@ -1,0 +1,29 @@
+; Welcome to student number
+
+; Syntax:
+; 1. Semicolon's are comments, anything after a Semicolon 
+;    will be ignored during compilation
+; 2. All instructions start with an instruction name, in
+;    all caps. We currently support the following instructions:
+;    BR,BRZ,ADDI,SUBI,SR0,SRH0,CLR,MOV,MOVA,MOVR,MOVRHS,PAUSE
+; 3. Immediate constants are preceded by a pound, #
+; 4. Register adresses are preceded by the letter r
+; 5. Instruction parameters can be separated by a space, comma
+;    or both. The compiler is not that fussy
+; 6. Only one instruction is allowed per line
+
+; Let's see some code (make sure add >+3 or sub <-4)
+
+CLR r0      ; clear R0 
+CLR r1      ; clear R1
+
+SR0 #7      ; put decimal 7 into r0
+MOV r1 r0   ; copy 7 into r1 from r0
+
+ADDI r1 #3  ; R1 = R1 + 3 = 10
+ADDI r1 #2  ; R1 = R1 + 2 = 12
+
+MOV r0 r1   ; moves r1 into r0
+
+; To Compile Me:
+; python compiler.py studentNumber.txt
