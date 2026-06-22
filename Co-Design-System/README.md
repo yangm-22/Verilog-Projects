@@ -11,4 +11,6 @@ Signal Tap Logic Analyzer is used to observe internal hardware signals such as c
 Overall, the project demonstrates how embedded C code running on a soft-core processor can directly control FPGA hardware in real time through memory-mapped I/O, while using debugging tools to validate system behaviour.
 
 ## Demo
-This is the [Demo](https://youtu.be/NZKGb-wHWeI).
+This is the [Blinking Lights Demo](https://youtu.be/NZKGb-wHWeI).
+
+This is the [Light Switches Demo](https://youtu.be/76d7wLZFMIY).
